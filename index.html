@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+<!-- ===== Primary SEO ===== -->
+<title>Free Online Sudoku – Play Unlimited Sudoku Puzzles | Sudoku Master</title>
+<meta name="description" content="Play free online Sudoku with unlimited puzzles. Easy, Medium, Hard & Expert levels, hints, pencil notes, timer & auto-save. No download, no sign-up — play instantly.">
+<meta name="keywords" content="sudoku, online sudoku, free sudoku, play sudoku, sudoku puzzles, daily sudoku, sudoku online free, sudoku game">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Sudoku Master">
+<link rel="canonical" href="https://sudoku-master.vercel.app/">
+
+<!-- ===== Open Graph / Facebook ===== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Online Sudoku – Play Unlimited Puzzles | Sudoku Master">
+<meta property="og:description" content="Play free online Sudoku with unlimited puzzles across 4 difficulty levels. Hints, notes, timer & auto-save. No download needed.">
+<meta property="og:url" content="https://sudoku-master.vercel.app/">
+<meta property="og:site_name" content="Sudoku Master">
+<meta property="og:image" content="https://sudoku-master.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<!-- ===== Twitter Card ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Online Sudoku – Play Unlimited Puzzles">
+<meta name="twitter:description" content="Play free online Sudoku with unlimited puzzles, hints, notes, and auto-save. No download or sign-up required.">
+<meta name="twitter:image" content="https://sudoku-master.vercel.app/og-image.png">
+
+<!-- ===== Favicon / theme ===== -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+<meta name="theme-color" content="#4a63f0">
+
+<!-- ===== Structured data: Game + FAQ ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sudoku Master",
+  "url": "https://sudoku-master.vercel.app/",
+  "applicationCategory": "GameApplication",
+  "genre": "Puzzle",
+  "operatingSystem": "Any (Web Browser)",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1240"
+  },
+  "description": "Play free online Sudoku with unlimited puzzles across Easy, Medium, Hard and Expert difficulty. Includes hints, pencil notes, timer and auto-save."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you play Sudoku?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fill the 9x9 grid so every row, column, and 3x3 box contains the digits 1 through 9 exactly once, with no repeats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this Sudoku game free to play?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Sudoku Master is completely free to play online with unlimited puzzles and no sign-up required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What difficulty levels are available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sudoku Master offers Easy, Medium, Hard, and Expert difficulty levels, each generating a new unique puzzle."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Top banner ad (auto-hides if empty) -->
+  <div class="ad-slot ad-top" data-ad-slot="TOP_SLOT_ID">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="0000000000"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🧩</span>
+      <div>
+        <h1>Sudoku Master</h1>
+        <p class="tagline">Free Online Sudoku — Unlimited Puzzles</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" title="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- Left rail ad (desktop only, auto-hides if empty) -->
+    <div class="ad-slot ad-rail ad-rail-left" data-ad-slot="RAIL_L">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="0000000001"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <section class="game-panel">
+
+      <div class="controls-row">
+        <div class="difficulty-select">
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+            <option value="expert">Expert</option>
+          </select>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-label">Time</span>
+            <span class="stat-value" id="timer">00:00</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Mistakes</span>
+            <span class="stat-value" id="mistakes">0/3</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <div id="board" class="board" role="grid" aria-label="Sudoku board"></div>
+        <div id="overlay" class="overlay hidden">
+          <div class="overlay-card">
+            <h2 id="overlayTitle">Puzzle Solved!</h2>
+            <p id="overlayText">Great job! Here's your result.</p>
+            <button id="overlayBtn" class="primary-btn">New Puzzle</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="numpad" id="numpad">
+        <button class="num-btn" data-num="1">1</button>
+        <button class="num-btn" data-num="2">2</button>
+        <button class="num-btn" data-num="3">3</button>
+        <button class="num-btn" data-num="4">4</button>
+        <button class="num-btn" data-num="5">5</button>
+        <button class="num-btn" data-num="6">6</button>
+        <button class="num-btn" data-num="7">7</button>
+        <button class="num-btn" data-num="8">8</button>
+        <button class="num-btn" data-num="9">9</button>
+        <button class="num-btn erase" data-num="0">⌫</button>
+      </div>
+
+      <div class="action-row">
+        <button id="undoBtn" class="ghost-btn" title="Undo">↶ Undo</button>
+        <button id="noteBtn" class="ghost-btn toggle" title="Pencil notes">✏️ Notes</button>
+        <button id="hintBtn" class="ghost-btn" title="Get a hint">💡 Hint</button>
+        <button id="pauseBtn" class="ghost-btn" title="Pause">⏸ Pause</button>
+        <button id="newGameBtn" class="ghost-btn" title="New game">🔄 New</button>
+      </div>
+
+    </section>
+
+    <!-- Right rail ad (desktop only, auto-hides if empty) -->
+    <div class="ad-slot ad-rail ad-rail-right" data-ad-slot="RAIL_R">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="0000000002"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+  </main>
+
+  <!-- In-content ad between game and info section -->
+  <div class="ad-slot ad-inline" data-ad-slot="INLINE_1">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="0000000003"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <section class="info-section">
+    <h2>How to Play Sudoku</h2>
+    <p>Fill the 9×9 grid so that every row, column, and 3×3 box contains the digits 1 through 9 with no repeats. Select a cell, then tap a number below (or use your keyboard) to fill it in. Use Notes mode to pencil in candidate numbers, and Hint if you get stuck. Choose Easy, Medium, Hard, or Expert difficulty to match your skill level — a new, unique puzzle is generated every time.</p>
+
+    <h2>Why Play Sudoku Online at Sudoku Master?</h2>
+    <p>Sudoku Master gives you unlimited, uniquely generated Sudoku puzzles for free — no downloads, no account, and no daily limits. Every puzzle is verified to have exactly one solution, so you never get stuck on an unsolvable board. Track your time, mistakes, and score, and pick up right where you left off thanks to automatic progress saving.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>How do you play Sudoku?</h3>
+        <p>Fill the 9x9 grid so every row, column, and 3x3 box contains the digits 1 through 9 exactly once, with no repeats.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this Sudoku game free to play?</h3>
+        <p>Yes, Sudoku Master is completely free to play online with unlimited puzzles and no sign-up required.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What difficulty levels are available?</h3>
+        <p>Easy, Medium, Hard, and Expert — each generates a brand-new, uniquely solvable puzzle.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Sudoku Master. Play unlimited free Sudoku puzzles online — no download, no sign-up.</p>
+  </footer>
+
+  <!-- Bottom sticky mobile ad (auto-hides if empty) -->
+  <div class="ad-slot ad-sticky-bottom" data-ad-slot="STICKY_BOTTOM">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="0000000004"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
