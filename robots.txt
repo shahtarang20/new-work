@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sudoku-master.vercel.app/sitemap.xml
+Sitemap: https://new-work-ruddy.vercel.app/sitemap.xml
